@@ -4,7 +4,7 @@ import Landing from "./components/Landing";
 import Skills from "./components/Skills" 
 import About from "./components/About";
 import Projects from "./components/Projects";
-import LineGradient from "./components/LineGradient";
+import LineGradient from "./components/Linegradient";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
