@@ -1,4 +1,4 @@
-import LineGradient from "./LineGradient";
+import Linegradient from "./Linegradient";
 import { motion } from "framer-motion";
 import KeepIT from "../assets/KeepIT.png";
 import PG from "../assets/Pg.png";
@@ -65,7 +65,7 @@ const Projects = () => {
             <span className="text-navy-blue">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
-            <LineGradient width="w-2/3" />
+            <Linegradient width="w-2/3" />
           </div>
         </div>
       </motion.div>
