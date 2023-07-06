@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import LandingImg from "../assets/imgg1.png"
+
 const Landing = ({ setSelectedPage }) => {
     return (
         <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
@@ -17,7 +19,7 @@ const Landing = ({ setSelectedPage }) => {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >
-                        <img className="" src="src\assets\imgg1.png" alt="img1" />
+                        <img className="" src={LandingImg} alt="img1" />
                     </motion.div>
                 </div>
 

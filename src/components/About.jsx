@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import ProfileImg from "../assets/profile.png"
 const About = () => {
     return (
         <section id="about" className="md:flex md:justify-between md:items-center md:h-full gap-16">
@@ -15,7 +15,7 @@ const About = () => {
                     }}
                 >
                 <div className="">
-                    <img className="rounded-full" src="src\assets\profile.png" alt="profile" />
+                    <img className="rounded-full" src={ProfileImg} alt="profile" />
                 </div>
                 </motion.div>
             </div>
