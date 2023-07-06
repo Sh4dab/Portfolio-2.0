@@ -1,4 +1,4 @@
-import LineGradient from "../components/LineGradient";
+import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
 import KeepIT from "../assets/KeepIT.png";
 import PG from "../assets/Pg.png";
