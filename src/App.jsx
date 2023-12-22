@@ -4,7 +4,6 @@ import Landing from "./components/Landing";
 import Skills from "./components/Skills" 
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Linegradient from "./components/Linegradient";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -28,20 +27,17 @@ function App() {
       <div className="app ">
         <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         <div className={"w-5/6 mx-auto "}>
-          <Landing setSelectedPage={setSelectedPage} />
+          <Landing />
         </div>
         <div className={"w-5/6 mx-auto md:h-full"}>
           <About />
         </div>
-        <Linegradient />
         <div className={"w-5/6 mx-auto"}>
           <Skills />
         </div>
-        <Linegradient />
         <div className={"w-5/6 mx-auto"}>
           <Projects />
         </div>
-        <Linegradient />
         <Contact />
         <Footer />
       </div>

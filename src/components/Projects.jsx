@@ -1,4 +1,4 @@
-import Linegradient from "./Linegradient";
+
 import { motion } from "framer-motion";
 import KeepIT from "../assets/KeepIT.png";
 import PG from "../assets/Pg.png";
@@ -50,7 +50,7 @@ const Projects = () => {
     <section id="projects" className="pt-20 pb-20">
 
       <motion.div
-        className="md:w-2/5 mx-auto text-center pb-20"
+        className="md:w-2/5 pb-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -61,12 +61,9 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-playfair font-semibold text-6xl">
             <span className="text-navy-blue">PRO</span>JECTS
           </p>
-          <div className="flex justify-center mt-5">
-            <Linegradient width="w-2/3" />
-          </div>
         </div>
       </motion.div>
 
@@ -88,6 +85,7 @@ const Projects = () => {
                 src={project.src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
+                style={{ height: '200px' }}
               />
               <p className="flex items-center justify-center text-2xl pt-5 font-playfair font-semibold">{project.title}</p>
               <div className="flex items-center justify-center">

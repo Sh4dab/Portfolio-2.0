@@ -1,11 +1,14 @@
 import { useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import useMediaQuery from "../hooks/useMediaQuery"
+import menuIcon from "../assets/menu-icon.svg";
+import closeIcon from "../assets/close-icon.svg";
+
 const Link = ({ page, selectedPage, setSelectedPage }) => {
     const LowercasePage = page.toLowerCase();
     return (
         <AnchorLink
-            className={`${selectedPage === LowercasePage ? "text-navy-blue" : ""}
+            className={`${selectedPage === LowercasePage ? "" : ""}
             hover:text-yellow-500 transition duration-500 
             
             `}
@@ -59,7 +62,7 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
                             className="rounded-full bg-navy-blue p-2 "
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <img src="src\assets\menu-icon.svg" alt="menu-icon" />
+                            <img src={menuIcon} alt="menu-icon" />
                         </button>
                     </div>
                 )}
@@ -67,11 +70,11 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
                     <div className="fixed right-0 bottom-0 h-full bg-navy-blue w-[300px]">
                         <div className="flex justify-end p-10">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <img alt="close-icon" src="src\assets\close-icon.svg" />
+                                <img alt="close-icon" src={closeIcon} />
                             </button>
                         </div>
 
-                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
+                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-black">
                             <Link
                                 page="Home"
                                 selectedPage={selectedPage}

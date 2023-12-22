@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import LandingImg from "../assets/imgg1.png"
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = () => {
     return (
         <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
             <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
@@ -59,14 +58,14 @@ const Landing = ({ setSelectedPage }) => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <AnchorLink
-                        className="bg-navy-blue text-deep-blue rounded-sm py-3 px-7 font-semibold
+                    <a
+                        href="https://drive.google.com/file/d/1smkP73d4xKVsxgQ99oXDrYTVXsFOoTpT/view?usp=sharing"
+                        className="bg-navy-blue text-deep-blue rounded-lg py-3 px-7 font-semibold
                         hover:bg-blue hover:text-white transition duration-500"
-                        onClick={() => setSelectedPage("contact")}
-                        href="#contact"
+                        target="_blank"
                     >
-                        Contact Me
-                    </AnchorLink>
+                        My Resume
+                    </a>
                 </motion.div>
 
                 <motion.div
