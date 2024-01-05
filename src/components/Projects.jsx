@@ -4,9 +4,9 @@ import KeepIT from "../assets/KeepIT.png";
 import PG from "../assets/Pg.png";
 import WeatherApp from "../assets/weather.png";
 import OldPortfolio from "../assets/oldprt.png";
-import PokePic from "../assets/PokePic.png"
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { RiGithubFill } from "react-icons/ri";
+import PokePic from "../assets/PokePic.png";
+import ContactsBackend from "../assets/ContactsBackend.png";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   const projects = [
@@ -45,6 +45,14 @@ const Projects = () => {
       demo: "https://sh4dab.github.io/PokePic/",
       code: "https://github.com/Sh4dab/PokePic",
     },
+    {
+      id: 6,
+      src: ContactsBackend,
+      title: "Contacts Backend",
+      demo: "",
+      code: "https://github.com/Sh4dab/mycontacts-backend",
+      techStack: ["ExpressJS","MongoDB"],
+    },
   ];
   return (
     <section id="projects" className="pt-20 pb-20">
@@ -80,29 +88,9 @@ const Projects = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={project.src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-                style={{ height: '200px' }}
-              />
-              <p className="flex items-center justify-center text-2xl pt-5 font-playfair font-semibold">{project.title}</p>
-              <div className="flex items-center justify-center">
-                <a className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" 
-                  target="_blank"
-                  rel="noreferrer"
-                  href={project.demo}>
-                  Demo <FaExternalLinkAlt className="inline"/>
-                </a>
-                <a className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 "
-                  target="_blank"
-                  rel="noreferrer"
-                  href={project.code}>
-                  Code <RiGithubFill size={25} className="inline"/>
-                </a>
-              </div>
-            </div>
+            <ProjectCard id={project.id} imgSrc={project.src} title={project.title} 
+            demoLink={project.demo} codeLink={project.code} techStack={project.techStack}
+            />
           </motion.div>
           ))}
         </div>
